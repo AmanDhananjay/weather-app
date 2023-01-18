@@ -1,0 +1,254 @@
+ body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #222;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 120%;
+
+}
+*{
+  box-sizing: border-box;
+}
+
+.card {
+  
+   background: rgba(248, 244, 244, 0.2); 
+  color: rgb(15, 15, 15);
+  font-weight: 800;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  position: absolute;
+  left: 10vw;
+  top:10vh;
+  backdrop-filter: blur (10px);
+ -webkit-backdrop-filter: blur (10px);
+
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #f7e6e62b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+/* ooooooooooooooooxx */
+/* .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between; align-items: flex-start;
+ flex-direction: column;
+  padding: 2em 3em 4em 3em;
+}
+.container > div { 
+  display: flex;
+  justify-content: center; align-items: center;
+  }
+  .city-time, .temp,.weather {
+    margin: 1em;
+    }
+.city-time h1 {
+margin: 0;
+margin-bottom: 0.2em;
+font-size: 3em;
+}
+.temp {
+font-size: 7em;
+margin: 0;
+}
+.weather img {
+display: block;
+margin: 0.5em 0;
+} */
+.panel {
+  position: absolute; width: 40%;
+  height: 100%;
+  font-weight: 900;
+  top: 0;
+  right: 0;
+  background:
+  rgba(110, 110, 110, 0.25);
+  box-shadow:
+  0 8px 32px 0
+  rgba(0, 0, 0, 0.3);
+   backdrop-filter: blur (10px);
+    -webkit-backdrop-filter: blur (10px);
+  border:
+  1px solid
+  rgba(255, 255, 255, 0.18);  
+  z-index: 1;
+    padding: 3em 2em;
+  overflow-Y: scroll;
+}
+
+.panel form {
+margin-bottom:  3em;
+}
+.submit {
+position: absolute;
+top: 0;
+right: 0;
+padding: 1.5em;
+margin: 0;
+border: none;
+outline: none; background: #fa6d1b; color: rgb(10, 10, 10);
+cursor: pointer;
+font-size: 1.2em;
+transition: 0.4s;
+}
+.submit:hover {
+  background: #fff !important;
+  color: #000;
+  }
+.search{
+display: flex;
+flex-direction: row;
+row-gap: 10px;
+}
+  .search1 {
+     
+      background: none;
+      border: none;
+      border-bottom: 1px #ccc solid;
+      padding: 1em 0.5em 0;
+      width: 80%;
+      color: #fff;
+      font-size: 1.1em;
+      }  
+    .search1:focus{
+      outline: none; 
+   }
+   .search1::placeholder{
+      color: #ccc;
+   }
+   .panel ul{
+      padding: 0 0 1em 0;
+      margin: 2em 0;
+      border-bottom:  1px #ccc solid;
+   }
+   .panel ul li{
+      color: rgb(18, 17, 17);
+      margin:  2.5em 0;
+   }
+   .panel ul h4{
+      margin: 3em 0;
+   }
+   .city{
+      display: block;
+      cursor: pointer;
+   }
+   .city:hover{
+      color: rgb(91, 87, 87);
+   }
+   .details li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   @media screen and (max-width: 900px) {
+    .weather-app{
+      display: flex;
+      flex-direction: row;
+    }
+    .card{
+      position: absolute;
+      width: 100%;
+      top:0vh;
+    }
+
+      .panel {
+      
+      position: fixed; 
+      width: 100%;
+      top: 80vh;
+  }
+  .panel{
+    position: relative;
+    top: 45vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+  
+  font-size: 12px;
+  }
+}
+@media screen and (max-height: 300px) {
+  .weather-app {
+  min-height: 40em;
+  }
+}
+
